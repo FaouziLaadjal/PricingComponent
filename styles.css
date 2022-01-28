@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  padding-top: 30px;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-wrapper {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:hover {
+  cursor: pointer;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  background-color: #8084e5;
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.idk {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 50px;
+  justify-content: center;
+}
+.title h1 {
+  text-align: center;
+  color: rgb(77, 75, 75);
+  font-weight: bold;
+}
+span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: grey;
+}
+.button {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  align-items: center;
+}
+.row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-bottom: 50px;
+}
+.column {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 40px;
+  justify-content: center;
+}
+.column p {
+  color: #7a7e8a;
+
+  font-size: 1rem;
+  font-weight: bold;
+}
+.column h1 {
+  color: #47495e;
+
+  font-size: 4rem;
+}
+.column span {
+  color: #47495e;
+  font-size: 2rem;
+}
+button {
+  background-color: #8084e5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 100px;
+  padding-left: 100px;
+  border: #8084e5 1px solid;
+  cursor: pointer;
+  border-radius: 10px;
+}
+button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.column:hover {
+  background-color: #8084e5;
+  color: white;
+  border: grey 1px solid;
+}
+.column:hover button {
+  background-color: white;
+}
+.column:hover a {
+  color: #8084e5;
+}
+.column:hover p {
+  color: white;
+}
+.column:hover h1 {
+  color: white;
+}
+.column:hover span {
+  color: white;
+}
+.random {
+  display: none;
+}
+@media screen and (max-width: 830px) {
+  .row {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: none;
+    gap: 20px;
+    padding: 30px;
+  }
+  .random {
+    display: none;
+  }
+  button {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
